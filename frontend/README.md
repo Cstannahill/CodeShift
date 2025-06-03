@@ -63,21 +63,35 @@ A modern React application built with TypeScript, Vite, and Tailwind CSS for int
 
 ```tree
 src/
-├── components/         # Reusable UI components
-│   ├── ui/             # Base UI components
-│   └── layouts/        # Layout components
-├── pages/              # Feature-based modules
-│   ├── auth/           # Authentication
-│   ├── dashboard/      # Dashboard
-│   ├── repositories/   # Repository management
-│   ├── translation/    # Code translation
-│   └── learning/       # Learning paths
-├── hooks/              # Custom React hooks
-├── services/           # API services (mock data)
-├── stores/             # Zustand stores
-├── types/              # TypeScript type definitions
-├── utils/              # Utility functions
-└── styles/             # Global styles
+├── components/           # Reusable UI components
+│   ├── ui/               # Base UI components (Button, Input, Select, etc.)
+│   ├── layouts/          # Layout components (Header, Sidebar, PageHeader, etc.)
+│   ├── features/         # Feature-specific components
+│   │   ├── learning/     # Learning path components
+│   │   ├── repositories/ # Repository management components
+│   │   └── translation/  # Code translation components (FrameworkSelector, etc.)
+│   ├── providers/        # React context providers (Auth, Theme, Toast)
+│   └── CodeEditor/       # Monaco editor wrapper component
+├── pages/                # Page-level components
+│   ├── auth/             # Authentication pages
+│   ├── dashboard/        # Dashboard pages
+│   ├── error/            # Error pages
+│   ├── landing/          # Landing page
+│   ├── learning/         # Learning path pages
+│   ├── profile/          # User profile pages
+│   ├── repositories/     # Repository pages
+│   ├── routes/           # Route definitions and configuration
+│   └── translation/      # Code translation pages
+├── hooks/                # Custom React hooks
+│   ├── common/           # General-purpose hooks (useDebounce, useTheme, etc.)
+│   └── queries/          # Data fetching hooks (useAuth, useDashboard, etc.)
+├── lib/                  # Core utilities and configuration
+│   ├── stores/           # Zustand state management stores
+│   └── utils/            # Helper functions and utilities
+├── services/             # API services and mock data
+├── styles/               # Global styles and brand theming
+├── types/                # TypeScript type definitions
+└── assets/               # Static assets (images, icons)
 ```
 
 ## Key Features

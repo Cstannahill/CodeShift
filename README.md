@@ -64,24 +64,48 @@ CodeShift is a modern web application that leverages AI to help developers trans
 
 ```tree
 codeshift/
-├── frontend/              # React application (production ready)
+├── frontend/                    # React application (production ready)
 │   ├── src/
-│   │   ├── components/    # Reusable UI components
-│   │   ├── pages/         # Feature-based page components
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── services/      # API services & mock data
-│   │   ├── stores/        # Zustand state management
-│   │   ├── types/         # TypeScript definitions
-│   │   └── utils/         # Helper functions
-│   └── public/            # Static assets
-├── backend/               # FastAPI application (in development)
+│   │   ├── components/          # Reusable UI components
+│   │   │   ├── ui/              # Base UI components (Button, Input, etc.)
+│   │   │   ├── layouts/         # Layout components (Header, Sidebar, etc.)
+│   │   │   ├── features/        # Feature-specific components
+│   │   │   │   ├── learning/    # Learning path components
+│   │   │   │   ├── repositories/ # Repository management
+│   │   │   │   └── translation/ # Code translation features
+│   │   │   ├── providers/       # React context providers
+│   │   │   └── CodeEditor/      # Monaco editor wrapper
+│   │   ├── pages/               # Page-level components
+│   │   │   ├── auth/            # Authentication pages
+│   │   │   ├── dashboard/       # Dashboard pages
+│   │   │   ├── learning/        # Learning path pages
+│   │   │   ├── profile/         # User profile pages
+│   │   │   ├── repositories/    # Repository pages
+│   │   │   ├── translation/     # Translation pages
+│   │   │   └── routes/          # Route definitions
+│   │   ├── hooks/               # Custom React hooks
+│   │   │   ├── common/          # General-purpose hooks
+│   │   │   └── queries/         # Data fetching hooks
+│   │   ├── lib/                 # Core utilities and configuration
+│   │   │   ├── stores/          # Zustand state management
+│   │   │   └── utils/           # Helper functions and utilities
+│   │   ├── services/            # API services & mock data
+│   │   ├── styles/              # Global styles and themes
+│   │   ├── types/               # TypeScript type definitions
+│   │   └── assets/              # Static assets (images, icons)
+│   ├── public/                  # Public static files
+│   └── config files             # Vite, TypeScript, Tailwind configs
+├── backend/                     # FastAPI application (in development)
 │   ├── src/
-│   │   ├── api/           # API routes and schemas
-│   │   ├── core/          # Core functionality
-│   │   ├── database/      # Database models and connections
-│   │   └── services/      # Business logic services
-│   └── tests/             # Backend tests
-└── docker/                # Docker configuration
+│   │   ├── api/                 # API routes and schemas
+│   │   │   └── auth/            # Authentication endpoints
+│   │   ├── core/                # Core functionality
+│   │   ├── database/            # Database models and connections
+│   │   ├── services/            # Business logic services
+│   │   └── workers/             # Background task workers
+│   └── tests/                   # Backend tests
+├── docker/                      # Docker configuration
+└── config files                 # Package.json, docker-compose, etc.
 ```
 
 ## 🚀 Quick Start
