@@ -11,9 +11,8 @@ import {
 import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/Progress";
 import { Button } from "@/components/ui/Button";
-import { Repository } from "@/types";
+import type { Repository } from "@/types";
 import { formatRelativeTime } from "@/lib/utils/format";
-import { cn } from "@/lib/utils/cn";
 
 interface RepositoryCardProps {
   repository: Repository;
@@ -26,7 +25,9 @@ export function RepositoryCard({
   onAnalyze,
   isAnalyzing,
 }: RepositoryCardProps) {
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (
+    status: string
+  ): "success" | "warning" | "destructive" | "secondary" => {
     switch (status) {
       case "completed":
         return "success";
@@ -79,7 +80,7 @@ export function RepositoryCard({
             </CardDescription>
           </div>
           <Badge
-            variant={getStatusColor(repository.status) as any}
+            variant={getStatusColor(repository.status)}
             className="ml-2 flex items-center gap-1"
           >
             {getStatusIcon(repository.status)}

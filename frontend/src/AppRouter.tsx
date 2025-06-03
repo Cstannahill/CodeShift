@@ -1,5 +1,5 @@
 // src/AppRouter.tsx
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { RootLayout } from "./components/layouts/RootLayout";
 import { LoadingPage } from "./components/layouts/LoadingPage";
@@ -24,6 +24,7 @@ const LearningPathDetailPage = lazy(
   () => import("@/pages/learning/LearningPathDetailPage")
 );
 const ProfilePage = lazy(() => import("@/pages/profile/ProfilePage"));
+const AnalyticsPage = lazy(() => import("@/pages/analytics/AnalyticsPage"));
 const AuthCallbackPage = lazy(() => import("@/pages/auth/AuthCallbackPage"));
 const NotFoundPage = lazy(() => import("@/pages/error/NotFoundPage"));
 
@@ -112,6 +113,15 @@ export function AppRouter() {
             element={
               <Suspense fallback={<LoadingPage />}>
                 <ProfilePage />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="analytics"
+            element={
+              <Suspense fallback={<LoadingPage />}>
+                <AnalyticsPage />
               </Suspense>
             }
           />

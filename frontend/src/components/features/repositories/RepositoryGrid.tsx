@@ -1,5 +1,5 @@
 // src/features/repositories/RepositoryGrid.tsx
-import { Repository } from "@/types";
+import type { Repository } from "@/types";
 import { RepositoryCard } from "./RepositoryCard";
 import { EmptyState } from "@/components/layouts/EmptyState";
 import { GitBranch } from "lucide-react";

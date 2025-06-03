@@ -16,7 +16,7 @@ export const mockUser: User = {
   id: "1",
   username: "ctan-dev",
   email: "ctan-dev@example.com",
-  avatarUrl: "/src/assets/avatar.jpg",
+  avatarUrl: "/avatar.jpg",
   plan: "pro",
   createdAt: "2024-01-15T10:30:00Z",
   skillProfileId: "sp_1",
