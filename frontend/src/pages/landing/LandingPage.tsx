@@ -59,11 +59,9 @@ export default function LandingPage() {
               <Github className="h-5 w-5 mr-2" />
               Start with GitHub
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/demo">
-                <Code2 className="h-5 w-5 mr-2" />
-                Try Demo
-              </Link>
+            <Button size="lg" onClick={handleGitHubLogin} loading={isLogging}>
+              <Code2 className="h-5 w-5 mr-2" />
+              Try Demo
             </Button>
           </div>
         </div>
