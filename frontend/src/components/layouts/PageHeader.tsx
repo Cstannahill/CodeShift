@@ -16,7 +16,12 @@ export function PageHeader({
   className,
 }: PageHeaderProps) {
   return (
-    <div className={cn("flex items-center justify-between pb-6", className)}>
+    <div
+      className={cn(
+        "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-6",
+        className,
+      )}
+    >
       <div className="space-y-1">
         <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
         {description && (
