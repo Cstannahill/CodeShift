@@ -235,6 +235,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Frontend Demo**: Available at [localhost:3000](http://localhost:3000) when running
 - **Documentation**: See `frontend/README.md` for detailed frontend docs
+- **Fine-Tuning Guide**: Dataset and parameter reference in `docs/`
 - **Issues**: Report bugs and request features via GitHub Issues
 
 ---
